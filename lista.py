@@ -16,11 +16,13 @@ while True:
 for indice, item in enumerate(lista_de_compras):
     print(str(indice + 1) + ". " + item)
 
-while True:
-    itens_remover = input("Qual item deseja remover ou digite \"fim\" pra encerrar: ")
-    if itens_remover == "fim":
+remover = input("Deseja apagar algum item? \"S\" pra \"Sim\" ou \"N\" pra \"Não\": ")
+if remover == "S":
+    while True:
+      itens_remover = input("Qual item deseja remover ou digite \"fim\" pra encerrar: ")
+      if itens_remover == "fim":
         break
-    else:
+      else:
         if itens_remover in lista_de_compras:
             lista_de_compras.remove(itens_remover)
             print(itens_remover, "foi removido da compra")
@@ -28,7 +30,7 @@ while True:
             print("Item não encontrado")
 
 for indice, item in enumerate(lista_de_compras):
-    print(str(indice + 1) + ". " + item)
+   print(str(indice + 1) + ". " + item)
 
 
 
